@@ -32,7 +32,14 @@ public class ShapePerimeterComparator implements Comparator<Shape>
 	@Override
 	public int compare(Shape s1, Shape s2)
 	{
-		// TODO: complete this...
+		Double p1 = s1.getPerimeter();
+		Double p2 = s2.getPerimeter();
+		if(p1 < p2) 
+			return -1;
+		else if(p1 > p1)
+			return 1;
+		else 
+			return 0;
 	}
 
 	/**
@@ -45,6 +52,9 @@ public class ShapePerimeterComparator implements Comparator<Shape>
 	 */
 	public boolean equals(Shape s1, Shape s2)
 	{
-		// TODO: complete this...
+		if(this.compare(s1, s2) == 0) 
+			return true;
+		else
+			return false;
 	}
 }

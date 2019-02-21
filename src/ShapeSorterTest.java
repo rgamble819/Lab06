@@ -42,7 +42,24 @@ public class ShapeSorterTest
 	@Test
 	public void SortShapesDefaultTest()
 	{
-		// TODO: complete this...
+		ShapeSorter sorter = new ShapeSorter();
+
+		Shape a = new Rectangle("test", 3, 5);			// A =15
+		Shape b = new EquilateralTriangle("test2", 4);	// A = 6.928
+		Shape c = new Square("test3", 3);				// A = 9
+		Shape d = new Circle("test4", 1.5);				// A = 7.069
+
+		sorter.addShape(a);
+		sorter.addShape(b);
+		sorter.addShape(c);
+		sorter.addShape(d);
+		
+		sorter.sortShapes();
+
+		Assert.assertEquals("Shapes sorted incorrectly...", sorter.shapes.get(0), b); // Triangle is smallest
+		Assert.assertEquals("Shapes sorted incorrectly...", sorter.shapes.get(1), d); // Circle is the  next smallest
+		Assert.assertEquals("Shapes sorted incorrectly...", sorter.shapes.get(2), c); // Square is the 2nd largest
+		Assert.assertEquals("Shapes sorted incorrectly...", sorter.shapes.get(3), a); // Rectangle is the largest
 	}
 
 	/**

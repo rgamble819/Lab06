@@ -32,7 +32,14 @@ public class ShapeAreaComparator implements Comparator<Shape>
 	@Override
 	public int compare(Shape s1, Shape s2)
 	{
-		// TODO: complete this...
+		Double a1 = s1.getArea();
+		Double a2 = s2.getArea();
+		if(a1 < a2) 
+			return -1;
+		else if(a1 > a1)
+			return 1;
+		else 
+			return 0;
 	}
 
 	/**
@@ -45,6 +52,9 @@ public class ShapeAreaComparator implements Comparator<Shape>
 	 */
 	public boolean equals(Shape s1, Shape s2)
 	{
-		// TODO: complete this...
+		if(this.compare(s1, s2) == 0) 
+			return true;
+		else
+			return false;
 	}
 }
