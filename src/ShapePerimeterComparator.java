@@ -36,7 +36,7 @@ public class ShapePerimeterComparator implements Comparator<Shape>
 		Double p2 = s2.getPerimeter();
 		if(p1 < p2) 
 			return -1;
-		else if(p1 > p1)
+		else if(p1 > p2)
 			return 1;
 		else 
 			return 0;
