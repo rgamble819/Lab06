@@ -13,43 +13,44 @@ public class EquilateralTriangle extends Polygon
      */
     private double sideLength;
 
-	/**
-	 * Constructor for the equilateral triangle. Sets sideLength member variable and sets
-	 * all side length in Polygon sidelengths array.
-	 *
-	 * @param sidelength The length of the triangle sides.
-	 */
-	public EquilateralTriangle(String id, double sideLength)
-	{
-		super(id);
-		this.sideLength = sideLength;
+    /**
+     * Constructor for the equilateral triangle. Sets sideLength member variable and
+     * sets all side length in Polygon sidelengths array.
+     *
+     * @param sidelength
+     *            The length of the triangle sides.
+     */
+    public EquilateralTriangle(String id, double sideLength)
+    {
+        super(id);
+        this.sideLength = sideLength;
 
-		sideLengths.add(sideLength);
-		sideLengths.add(sideLength);
-		sideLengths.add(sideLength);
-	}
+        sideLengths.add(sideLength);
+        sideLengths.add(sideLength);
+        sideLengths.add(sideLength);
+    }
 
-	/**
-	 * Gets the area of the triangle.
-	 *
-	 * @return The area of the triangle (b*h/2 = sidelength*sidelength*root(3)/4)
-	 */
-	@Override
-	public double getArea()
-	{
-		double A = 0;
-		A = (sideLength * sideLength) * (Math.sqrt(3) / 4);
-		return A;
-	}
+    /**
+     * Gets the area of the triangle.
+     *
+     * @return The area of the triangle (b*h/2 = sidelength*sidelength*root(3)/4)
+     */
+    @Override
+    public double getArea()
+    {
+        double A = 0;
+        A = (sideLength * sideLength) * (Math.sqrt(3) / 4);
+        return A;
+    }
 
-	/**
-	 * Gets the shape type of the triangle.
-	 *
-	 * @return The string "EquilateralTriangle"
-	 */
-	@Override
-	public String getShapeType()
-	{
-		return "EquilateralTriangle";
-	}
+    /**
+     * Gets the shape type of the triangle.
+     *
+     * @return The string "EquilateralTriangle"
+     */
+    @Override
+    public String getShapeType()
+    {
+        return "EquilateralTriangle";
+    }
 }

@@ -16,7 +16,8 @@ public abstract class Polygon extends Shape
     /**
      * Initializes the sideLengths arraylist and sets the Shape's ID.
      *
-     * @param id The created shape's name id.
+     * @param id
+     *            The created shape's name id.
      */
     public Polygon(String id)
     {
@@ -30,15 +31,15 @@ public abstract class Polygon extends Shape
      * @return The perimeter of the polygon.
      */
     @Override
-	public double getPerimeter()
+    public double getPerimeter()
     {
-    	double sPerimeter = 0;
-    	
-    	for(int sIndex = 0; sIndex < sideLengths.size(); sIndex++) 
-    	{
-    		sPerimeter += sideLengths.get(sIndex);
-    	}
-    	
-    	return sPerimeter;
+        double sPerimeter = 0;
+
+        for (int sIndex = 0; sIndex < sideLengths.size(); sIndex++)
+        {
+            sPerimeter += sideLengths.get(sIndex);
+        }
+
+        return sPerimeter;
     }
 }
