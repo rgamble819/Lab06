@@ -38,9 +38,7 @@ public class EquilateralTriangle extends Polygon
     @Override
     public double getArea()
     {
-        double A = 0;
-        A = (sideLength * sideLength) * (Math.sqrt(3) / 4);
-        return A;
+        return (sideLength * sideLength) * (Math.sqrt(3) / 4);
     }
 
     /**

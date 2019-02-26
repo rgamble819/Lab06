@@ -39,6 +39,7 @@ public class ShapePerimeterComparator implements Comparator<Shape>
     {
         Double p1 = s1.getPerimeter();
         Double p2 = s2.getPerimeter();
+        
         if (p1 < p2)
         {
             return -1;

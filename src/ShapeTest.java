@@ -132,13 +132,16 @@ public class ShapeTest
         // Test equals:
         Shape rect = new Rectangle("R1", 3.0, 3.0);
         Shape sqr = new Square("S1", 3.0);
+        
         ShapeAreaComparator sc = new ShapeAreaComparator();
+        
         Assert.assertEquals("ShapeAreaComparator should find shapes equal.", 0, sc.compare(rect, sqr));
         Assert.assertTrue("ShapeAreaComparator should find shapes equal.", sc.equals(rect, sqr));
 
         // Test equal perimeter, different area:
         Shape rect2 = new Rectangle("R2", 1.0, 9.0);
         Shape sqr2 = new Square("S2", 5.0);
+        
         Assert.assertEquals("ShapeAreaComparator gave incorrect ordering.", -1, sc.compare(rect2, sqr2));
         Assert.assertEquals("ShapeAreaComparator gave incorrect ordering.", 1, sc.compare(sqr2, rect2));
         Assert.assertFalse("ShapeAreaComparator incorrectly finds shapes equal.", sc.equals(rect2, sqr2));
@@ -168,6 +171,7 @@ public class ShapeTest
         // Testing branches of comparator
         Shape rect2 = new Rectangle("R2", 1.0, 9.0);
         Shape circ2 = new Circle("circ", 5.0);
+        
         Assert.assertEquals("ShapePerimeterComparator gave incorrect ordering.", -1, sorter.compare(rect2, circ2));
         Assert.assertEquals("ShapePerimeterComparator gave incorrect ordering.", 1, sorter.compare(circ2, rect2));
         Assert.assertFalse("ShapePerimeterComparator incorrectly finds shapes equal.", sorter.equals(rect2, circ2));
@@ -194,6 +198,7 @@ public class ShapeTest
 
         Shape rect2 = new Rectangle("R2", 5, 5);
         Shape sq2 = new Square("S2", 5);
+        
         Assert.assertFalse("Shape compareTo incorrectly finds shapes equal.", sq2.equals(rect2));
 
         // Testing else branch
@@ -201,6 +206,7 @@ public class ShapeTest
 
         Shape rect3 = new Rectangle("R3", 2, 8);
         Shape rect4 = new Rectangle("R4", 4, 4);
+        
         Assert.assertEquals("Shape compare to incorrectly found shapes equal or out of order <1>", 1,
                 rect3.compareTo(rect4));
         Assert.assertEquals("Shape compare to incorrectly found shapes equal or out of order <2>", -1,

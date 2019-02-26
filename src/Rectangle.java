@@ -28,9 +28,7 @@ public class Rectangle extends Polygon
      */
     public double getArea()
     {
-        double A = 0;
-        A = height * width;
-        return A;
+        return (height * width);
     }
     
     /**
