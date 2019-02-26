@@ -4,6 +4,12 @@ public class Rectangle extends Polygon
     private double width;
     private double height;
 
+    /**
+     * 
+     * @param id Name of the Shape
+     * @param height dimensions
+     * @param width dimensions
+     */
     public Rectangle(String id, double height, double width)
     {
         super(id);
@@ -16,13 +22,21 @@ public class Rectangle extends Polygon
         sideLengths.add(height);
     }
 
+    /**
+     * 
+     * @return Double returns area of rectangle
+     */
     public double getArea()
     {
         double A = 0;
         A = height * width;
         return A;
     }
-
+    
+    /**
+     * 
+     * @return String returns type of shape
+     */
     public String getShapeType()
     {
         return "Rectangle";
