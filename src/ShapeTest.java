@@ -113,12 +113,11 @@ public class ShapeTest
         Shape circl = new Circle("circ", 3.0);
         double a = Math.PI * Math.pow(3.0, 2.0);
         double p = 2 * Math.PI * 3.0;
-        String string = String.format("Circle\t ID = circ\t area = %.3f\t perimeter = %.3f", a, p);
 
-        System.out.println("" + p + " " + a);
-        System.out.println(" " + string + "/t" + circl.toString());
         Assert.assertEquals("ShapeToString is incorrect",
-                String.format("Circle\t ID = circ\t area = %.3f\t perimeter = %.3f", a, p), circl.toString());
+                String.format("Circle:\t ID = circ\t area = %.3f\t perimeter = %.3f", a, p),
+                circl.toString());
+        
     }
 
     // ==================================================================================================================
@@ -161,7 +160,7 @@ public class ShapeTest
         Shape sq = new Square("C1", 5);
 
         ShapePerimeterComparator sorter = new ShapePerimeterComparator();
-        
+
         // Testing sorter
         Assert.assertEquals("ShapePerimeterComparator should find shapes equal", 0, sorter.compare(rect, sq));
         Assert.assertTrue("ShapePerimeterComparator should find shapes equal", sorter.equals(rect, sq));
